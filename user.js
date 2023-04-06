@@ -51,6 +51,7 @@ userSchema.statics.findByName = function(name){
 
 userSchema.query.byName = function (name){ //apply to a query
 	return this.where({ name : new RegExp(name , "i")})
+
 }
 
 userSchema.virtual('namedEmail').get(function(){
